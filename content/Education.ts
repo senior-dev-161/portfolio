@@ -3,7 +3,7 @@ const Educations = [
         id: 1,
         slug: "CalStateLA",
         school: "California State University, Los Angeles",
-        image: '/images/educations/uni_logo.jpg',
+        image: '/images/educations/calstatela.jpg',
         degree: "BCompSc",
         address: "Los Angeles, CA",
         field_of_study: "Computer Science",

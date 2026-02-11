@@ -14,7 +14,7 @@ import { useEffect, useState } from 'react'
 import { getProfileInfo } from '@lib/backendAPI'
 import { ProfileType } from '@lib/types'
 import { BsGithub, BsLinkedin } from 'react-icons/bs'
-import Image from 'next/image'
+// Using native <img> here to avoid Next/Image internal prop forwarding
 
 export default function Home() {
 
@@ -50,13 +50,18 @@ export default function Home() {
               variants={popUp}
               className="relative flex items-center justify-center p-3 rounded-full overflow-hidden w-44 h-44 xs:w-64 xs:h-64 before:absolute before:inset-0 before:border-t-4 before:border-b-4 before:border-black before:dark:border-white before:rounded-full before:animate-photo-spin"
             >
-              <Image
-                src={profileInfo?.image || homeProfileImage}
+              <img
+                src={
+                  typeof (profileInfo?.image) === 'string'
+                    ? profileInfo?.image
+                    : (homeProfileImage as any)?.src || (homeProfileImage as any)
+                }
                 className="rounded-full shadow filter"
                 width={933}
                 height={933}
                 alt="Cooper's Profile Photo"
-                quality={60}
+                loading="eager"
+                draggable={false}
               />
             </motion.div>
 

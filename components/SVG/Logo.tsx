@@ -1,6 +1,8 @@
+import Image from "next/image"
+
 export default function Logo({ className }: { className: string }) {
   return (
-    <img
+    <Image
       src="/logo.png"
       className={className}
       width={48}
