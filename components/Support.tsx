@@ -117,11 +117,14 @@ function UPIPaymentForm({ close }: { close: () => void }) {
               <div className="relative flex items-center justify-center">
                 <BiRupee className="h-full -ml-1 text-gray-600 w-9 dark:text-gray-200" />
                 <input
-                  onInput={(e: React.ChangeEvent<HTMLInputElement>) => {
-                    if (e.target.value.length === 0)
-                      return (e.target.style.width = "3ch");
-                    if ((e.target as HTMLInputElement).value.length > 7) return;
-                    e.target.style.width = e.target.value.length + "ch";
+                  onInput={(e) => {
+                    const target = e.target as HTMLInputElement;
+                    if (target.value.length === 0) {
+                      target.style.width = "3ch";
+                      return;
+                    }
+                    if (target.value.length > 7) return;
+                    target.style.width = target.value.length + "ch";
                   }}
                   title="Enter amount"
                   id="amount"
