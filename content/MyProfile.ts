@@ -1,0 +1,28 @@
+const MyProfile = {
+    id: 1,
+    username: "cooperwitzberger",
+    email: "cooper.contact@gmail.com",
+    name: "Cooper Witzberger",
+    slug: "cooper-witzberger",
+    nickname: "Cooper",
+    gender: "Male",
+    image: '/images/logo.png',
+    dob: "May, 2001",
+    website: "string",
+    contact: "string",
+    contact_email: "cooper.contact@gmail.com",
+    linkedin: "https://www.linkedin.com/in/cooper-witzberger-6816793a0",
+    github: "https://github.com/best-solution-0514",
+    address: "Manteca, CA",
+    about: "",
+    is_portfolio_user: "string",
+    resume_link: "/resume/Cooper-Resume.pdf",
+    is_active: "string",
+    is_staff: "string",
+    is_superuser: "string",
+    date_joined: "6 Jul 2024",
+    last_login: "6 Jul 2024",
+    updated_at: "6 Jul 2024",
+};
+
+export default MyProfile;

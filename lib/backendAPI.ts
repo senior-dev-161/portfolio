@@ -1,0 +1,256 @@
+
+const BACKEND_API_BASE_URL = process.env.BACKEND_API_BASE_URL
+const BACKEND_API_TOKEN = process.env.BACKEND_API_TOKEN
+
+// *** PROFILE ***
+// Profile URL
+const PROFILE_PATH = "users/get_portfolio_user/"
+const PROFILE_ENDPOINT = BACKEND_API_BASE_URL + PROFILE_PATH
+
+/**
+ * Makes a request to the BACKEND API to retrieve Portfolio User Information.
+ */
+export const getProfileInfo = async () => {
+  const portfolioProfile = await fetch(
+    PROFILE_ENDPOINT,
+    {
+      headers: {
+        Authorization: `Token ${BACKEND_API_TOKEN}`
+      }
+    }
+  )
+
+  if (portfolioProfile.ok) {
+    const responseData = await portfolioProfile.json()
+    return responseData.data
+  } else {
+    const errorMessage = `Error fetching portfolio profile: ${portfolioProfile.status} ${portfolioProfile.statusText}`
+    // Handle the error or display the error message
+    console.log(errorMessage)
+  }
+}
+
+// *** EXPERIENCE ***
+
+// Experience URL
+
+const EXPERIENCE_PATH = "professional-experiences/"
+const EXPERIENCE_ENDPOINT = BACKEND_API_BASE_URL + EXPERIENCE_PATH
+
+/**
+ * Makes a request to the BACKEND API to retrieve all Experience Data.
+ */
+export const getAllExperiences = async (length?: number | undefined) => {
+  let ENDPOINT = null
+  // Set limit if length is not undefined
+  if (length !== undefined) {
+    ENDPOINT = EXPERIENCE_ENDPOINT + `?_limit=${length}`
+  }
+  else {
+    ENDPOINT = EXPERIENCE_ENDPOINT
+  }
+
+  const allExperiences = await fetch(
+    ENDPOINT,
+    {
+      headers: {
+        Authorization: `Token ${BACKEND_API_TOKEN}`
+      }
+    }
+  )
+
+  if (allExperiences.ok) {
+    const responseData = await allExperiences.json()
+    return responseData.data
+  } else {
+    const errorMessage = `Error fetching professional experiences: ${allExperiences.status} ${allExperiences.statusText}`
+    // Handle the error or display the error message
+    console.log(errorMessage)
+  }
+}
+
+// *** SKILLS ***
+
+// Skills URL
+const SKILLS_PATH = "skills/"
+const SKILLS_ENDPOINT = BACKEND_API_BASE_URL + SKILLS_PATH
+
+/**
+ * Makes a request to the BACKEND API to retrieve all Skills Data.
+ */
+export const getAllSkills = async () => {
+  const allSkills = await fetch(
+    SKILLS_ENDPOINT,
+    {
+      headers: {
+        Authorization: `Token ${BACKEND_API_TOKEN}`
+      }
+    }
+  )
+
+  if (allSkills.ok) {
+    const responseData = await allSkills.json()
+    return responseData.data
+  } else {
+    const errorMessage = `Error fetching Skills: ${allSkills.status} ${allSkills.statusText}`
+    console.log(errorMessage)
+  }
+}
+
+// *** EDUCATIONS ***
+
+// Educations URL
+const EDUCATIONS_PATH = "educations/"
+const EDUCATIONS_ENDPOINT = BACKEND_API_BASE_URL + EDUCATIONS_PATH
+
+/**
+ * Makes a request to the BACKEND API to retrieve all Educations Data.
+ */
+export const getAllEducations = async () => {
+  const allEducations = await fetch(
+    EDUCATIONS_ENDPOINT,
+    {
+      headers: {
+        Authorization: `Token ${BACKEND_API_TOKEN}`
+      }
+    }
+  )
+
+  if (allEducations.ok) {
+    const responseData = await allEducations.json()
+    return responseData.data
+  } else {
+    const errorMessage = `Error fetching Educations: ${allEducations.status} ${allEducations.statusText}`
+    console.log(errorMessage)
+  }
+}
+
+// *** CERTIFICATES ***
+
+// Certificates URL
+const CERTIFICATES_PATH = "certifications/"
+const CERTIFICATES_ENDPOINT = BACKEND_API_BASE_URL + CERTIFICATES_PATH
+
+/**
+ * Makes a request to the BACKEND API to retrieve all Certificates Data.
+ */
+export const getAllCertificates = async () => {
+  const allCertificates = await fetch(
+    CERTIFICATES_ENDPOINT,
+    {
+      headers: {
+        Authorization: `Token ${BACKEND_API_TOKEN}`
+      }
+    }
+  )
+
+  if (allCertificates.ok) {
+    const responseData = await allCertificates.json()
+    return responseData.data
+  } else {
+    const errorMessage = `Error fetching Educations: ${allCertificates.status} ${allCertificates.statusText}`
+    console.log(errorMessage)
+  }
+}
+
+// *** PROJECTS ***
+
+// Projects URL
+const PROJECTS_PATH = "projects/"
+const PROJECTS_ENDPOINT = BACKEND_API_BASE_URL + PROJECTS_PATH
+
+/**
+ * Makes a request to the BACKEND API to retrieve all Projects Data.
+ */
+export const getAllProjects = async () => {
+  const allProjects = await fetch(
+    PROJECTS_ENDPOINT,
+    {
+      headers: {
+        Authorization: `Token ${BACKEND_API_TOKEN}`
+      }
+    }
+  )
+
+  if (allProjects.ok) {
+    const responseData = await allProjects.json()
+    return responseData.data
+  } else {
+    const errorMessage = `Error fetching Projects: ${allProjects.status} ${allProjects.statusText}`
+    console.log(errorMessage)
+  }
+}
+
+export const getProjectDetails = async (slug: string) => {
+  const projectDetails = await fetch(
+    PROJECTS_ENDPOINT + slug,
+    {
+      headers: {
+        Authorization: `Token ${BACKEND_API_TOKEN}`
+      }
+    }
+  )
+
+  if (projectDetails.ok) {
+    const responseData = await projectDetails.json()
+    return responseData.data
+  } else {
+    const errorMessage = `Error fetching Project Details: ${projectDetails.status} ${projectDetails.statusText}`
+    console.log(errorMessage)
+  }
+}
+
+
+// *** INTERESTS ***
+
+// Interests URL
+const INTERESTS_PATH = "interests/"
+const INTERESTS_ENDPOINT = BACKEND_API_BASE_URL + INTERESTS_PATH
+
+/**
+ * Makes a request to the BACKEND API to retrieve all Interests Data.
+ */
+export const getAllInterests = async () => {
+  const allInterests = await fetch(
+    INTERESTS_ENDPOINT,
+    {
+      headers: {
+        Authorization: `Token ${BACKEND_API_TOKEN}`
+      }
+    }
+  )
+
+  if (allInterests.ok) {
+    const responseData = await allInterests.json()
+    return responseData.data
+  } else {
+    const errorMessage = `Error fetching Interests: ${allInterests.status} ${allInterests.statusText}`
+    console.log(errorMessage)
+  }
+}
+
+// *** NEWSLETTER-SUBSCRIPTION ***
+
+// Blogs URL
+const NEWSLETTER_SUBSCRIPTION_PATH = "newsletter-subscription/"
+const NEWSLETTER_SUBSCRIPTION_ENDPOINT = BACKEND_API_BASE_URL + NEWSLETTER_SUBSCRIPTION_PATH
+
+/**
+ * Makes a POST request to the BACKEND API to subscribe to the newsletter.
+ * @param {string} email - The email address to subscribe to the newsletter.
+ * @returns {Promise} A promise that resolves to the response data or an error message.
+*/
+export const subscribeToNewsletter = async (email: string) => {
+  const response = await fetch(NEWSLETTER_SUBSCRIPTION_ENDPOINT, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Token ${BACKEND_API_TOKEN}`,
+    },
+    body: JSON.stringify({ email }),
+  })
+
+  const responseData = await response.json()
+  return responseData
+}
+
