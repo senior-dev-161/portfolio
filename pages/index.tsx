@@ -116,7 +116,7 @@ export default function Home() {
 
             {/* Resume Download Button */}
             <Link
-              href={'/resume/Cooper-Witzberger-Resume.pdf'}
+              href={'/resume/Resume.pdf'}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-5 py-2 transition-transform border border-gray-500 rounded-md outline-none select-none dark:border-gray-400 hover:bg-white dark:hover:bg-neutral-800 active:scale-95"

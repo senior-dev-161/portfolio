@@ -50,7 +50,7 @@ export default function MetaData({
       <meta
         name="keywords"
         content={`${keywords || ''
-          }, Cooper, Cooper Witzberger, Cooper, Witzberger, Cooper-Witzberger, Cooper blog, Cooper portfolio, web development, ai development, Cooper Witzberger Portfolio`}
+          }, Cooper, Cooper Witzberger, Cooper, Witzberger, Cooper-Witzberger, Cooper blog, Cooper Portfolio, Web development, AI development, Cooper Witzberger Portfolio`}
       />
       {/* Og */}
       <meta property="og:title" content={`${title}${suffix ? ` - ${suffix}` : ''} | davee0509`} />

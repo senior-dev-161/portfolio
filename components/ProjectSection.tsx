@@ -73,7 +73,7 @@ export default function ProjectSection({ projects }: { projects: ProjectType[] }
 
                     <h2 className="text-neutral-900 dark:text-neutral-200 text-sm">{project.short_description}</h2>
 
-                    {/* {project.technology && (
+                    {project.technology && (
                       <div className="flex flex-wrap items-center gap-1">
                         {project.technology.split(',').map((technology, index) => {
                           return (
@@ -86,7 +86,7 @@ export default function ProjectSection({ projects }: { projects: ProjectType[] }
                           )
                         })}
                       </div>
-                    )} */}
+                    )}
 
                     <div className="flex items-center gap-4 p-2 mt-auto w-fit">
                       {project.preview_url && (

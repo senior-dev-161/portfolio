@@ -1,5 +1,27 @@
 const Experience = [
     {
+        id: 0,
+        slug: "upwork",
+        company: "Upwork",
+        company_image: "/images/companies/upwork.jpg",
+        company_url: "",
+        address: "Remote",
+        designation: "Senior Software Engineer",
+        job_type: "Freelance",
+        job_location_type: "Remote",
+        start_date: "Jan 2026",
+        end_date: "Present",
+        duration: "Jan 2026 - Present",
+        duration_in_days: "3 mos",
+        currently_working: "string",
+        description: `<div class="relative md:border-gray-300 md:dark:border-gray-400 md:col-span-4 text-sm text-inherit font-light">
+        <p>• Developed Trading Education Platform using FastAPI, Next.js, including custom REST APIs, PostgreSQL databases, and Redis for background tasks.</p>
+        <p>• Built dynamic, SEO-friendly web apps using React and Next.js, with SSR, API integration (REST/GraphQL), and advanced state management (Redux, Context API).</p>
+        </div>`,
+        created_at: "string",
+        updated_at: "string",
+    },
+    {
         id: 1,
         slug: "kanda",
         company: "Kanda Software",
@@ -10,15 +32,17 @@ const Experience = [
         job_type: "Full Time",
         job_location_type: "Remote",
         start_date: "Sep 2024",
-        end_date: "Present",
-        duration: "Sep 2024 - Present",
-        duration_in_days: "1 yr 6 mos",
+        end_date: "Dec 2025",
+        duration: "Sep 2024 - Dec 2025",
+        duration_in_days: "1 yr 3 mos",
         currently_working: "string",
         description: `<div class="relative md:border-gray-300 md:dark:border-gray-400 md:col-span-4 text-sm text-inherit font-light">
-        <p>• Design and develop scalable full-stack applications using modern frontend frameworks and backend services.</p>
-        <p>• Lead implementation of AI-driven features, including intelligent automation and data-powered workflows.</p>
-        <p>• Architect and integrate RESTful APIs, cloud services, and third-party systems while improving performance, security, and maintainability.</p>
-        <p>• Contribute to technical decision-making and mentor junior engineers.</p>
+        <p>• Architected and delivered scalable full-stack applications using  Next.js, Node.js, Express.js, and FastAPI, serving 10K+ monthly active users.</p>
+        <p>• Designed and integrated REST & GraphQL APIs, reducing third-party data latency by 35%.</p>
+        <p>• Led implementation of LLM-powered features (OpenAI APIs, RAG, LangChain, NLP automation), decreasing manual workflows by 40%.</p>
+        <p>• Improved system performance by 30% through Redis caching, PostgreSQL optimization, and microservices refactoring.</p>
+        <p>• Deployed containerized services via Docker, Kubernetes, AWS (EC2, S3, Lambda), improving release cycles by 25%.</p>
+        <p>• Mentored 3+ engineers and contributed to architecture and DevOps best practices.</p>
         </div>`,
         created_at: "string",
         updated_at: "string",
@@ -28,9 +52,9 @@ const Experience = [
         slug: "beetechy2",
         company: "Bee Techy, LLC.",
         company_image: "/images/companies/beetechy.jpg",
-        company_url: "https://www.rootstrap.com/",
+        company_url: "https://beetechy.com/",
         address: "Los Angeles, CA",
-        designation: "Software Engineer",
+        designation: "Software Developer",
         job_type: "Full Time",
         job_location_type: "On-site",
         start_date: "Jun 2023",
@@ -39,10 +63,11 @@ const Experience = [
         duration_in_days: "1 yr 3 mos",
         currently_working: "string",
         description: `<div class="relative md:border-gray-300 md:dark:border-gray-400 md:col-span-4 text-sm text-inherit font-light">
-        <p>• Built and maintained full-stack web applications from concept through production.</p>
-        <p>• Developed backend services, RESTful APIs, and database schemas to support complex business logic.</p>
-        <p>• Collaborated with designers and stakeholders to deliver features aligned with product goals.</p>
-        <p>• Debugged, optimized, and enhanced systems to improve performance, scalability, and reliability.</p>
+        <p>• Built and scaled full-stack platforms using React, Redux, Tailwind, Node.js, Express, PostgreSQL, increasing user engagement by 28%.</p>
+        <p>• Developed backend services in Django, supporting high-volume REST APIs (50K+ daily requests).</p>
+        <p>• Integrated AI chatbots and automation systems, reducing support workload by 35%.</p>
+        <p>• Optimized database queries and caching (PostgreSQL, MongoDB, Redis), cutting API response time by 40%.</p>
+        <p>• Containerized and deployed applications using Docker & AWS, improving uptime to 99.9%.</p>
         </div>`,
         created_at: "string",
         updated_at: "string",
@@ -52,9 +77,9 @@ const Experience = [
         slug: "beetechy1",
         company: "Bee Techy, LLC.",
         company_image: "/images/companies/beetechy.jpg",
-        company_url: "https://www.manektech.com/",
-        address: "San Antonio, TX",
-        designation: "Junior Software Engineer",
+        company_url: "https://beetechy.com/",
+        address: "Los Angeles, CA",
+        designation: "Junior Software Developer",
         job_type: "Hybrid",
         job_location_type: "Contract",
         start_date: "Oct 2021",
@@ -63,11 +88,10 @@ const Experience = [
         duration_in_days: "1 yr 8 mos",
         currently_working: "string",
         description: `<div class="relative md:border-gray-300 md:dark:border-gray-400 md:col-span-4 text-sm text-inherit font-light">
-        <p>• Assisted in developing frontend and backend components for web-based applications.</p>
-        <p>• Implemented features using modern programming languages and frameworks under senior guidance.</p>
-        <p>• Wrote clean, maintainable code, contributed to bug fixes, and improved system functionality.</p>
-        <p>• Supported integration of APIs, databases, and third-party services.</p>
-        <p>• Collaborated with team members and gained hands-on experience with full-stack development, version control, and deployment workflows.</p>
+        <p>• Developed frontend features using React, JavaScript, Redux, Tailwind, contributing to 20% faster feature delivery.</p>
+        <p>• Supported backend API development with Node.js, Express, Flask.</p>
+        <p>• Integrated third-party APIs and improved bug resolution turnaround time by 30%.</p>
+        <p>• Assisted with AWS deployments and Docker-based environments, improving development consistency across teams.</p>
         </div>`,
         created_at: "string",
         updated_at: "string",
