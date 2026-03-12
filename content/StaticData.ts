@@ -10,5 +10,4 @@ const staticData: StaticData = {
   }
 }
 
-
 export default staticData

@@ -38,7 +38,7 @@ export default function MetaData({
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width,initial-scale=1.0" />
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="description" content={description || "Cooper Witzberger's Portfolio Web Application"} />
+      <meta name="description" content={description || "Cooper Witzberger's Portfolio Website"} />
       <title>{title + (suffix ? ` - ${suffix}` : '') + ' | Cooper Witzberger'}</title>
       <meta name="theme-color" content="#000" />
       <link rel="shortcut icon" href={faviconHref} sizes="any" />
@@ -50,14 +50,14 @@ export default function MetaData({
       <meta
         name="keywords"
         content={`${keywords || ''
-          }, Cooper, Cooper Witzberger, Cooper, Witzberger, Cooper-Witzberger, Cooper blog, Cooper Portfolio, Web development, AI development, Cooper Witzberger Portfolio`}
+          }, Cooper, Cooper Witzberger, Cooper, Witzberger, Cooper-Witzberger, Cooper Blog, Cooper Portfolio, Web Development, AI Development, Cooper Witzberger Portfolio`}
       />
       {/* Og */}
-      <meta property="og:title" content={`${title}${suffix ? ` - ${suffix}` : ''} | davee0509`} />
-      <meta property="og:description" content={description || "Cooper Witzberger's Portfolio Application"} />
-      <meta property="og:site_name" content="Portfolio application of Cooper Witzberger" />
+      <meta property="og:title" content={`${title}${suffix ? ` - ${suffix}` : ''}`} />
+      <meta property="og:description" content={description || "Cooper Witzberger's Portfolio"} />
+      <meta property="og:site_name" content="Portfolio of Cooper Witzberger" />
       <meta property="og:url" content={currentURL} key="ogurl" />
-      <meta property="og:image" content={previewImage || '/images/davee.jpg'} />
+      <meta property="og:image" content={previewImage || '/logo.png'} />
     </Head>
   )
 }
